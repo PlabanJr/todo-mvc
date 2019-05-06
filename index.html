@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>todos - Plan your day!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:200"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+
+    <script>
+      var controller;
+      window.onload = function() {
+        controller = new AppController();
+        controller.render();
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        todos
+      </div>
+
+      <div class="card-view">
+        <div class="input-area">
+          <form method="POST" id="add-form">
+            <i class="fas fa-chevron-down check-all" id="check-all-btn"></i>
+            <input
+              type="text"
+              name="taskItem"
+              placeholder="What needs to be done?"
+              class="input-field"
+              id="user-input"
+              required
+            />
+            <input type="submit" style="display:none;" />
+          </form>
+        </div>
+
+        <div class="list">
+          <ul id="task_list"></ul>
+        </div>
+
+        <div class="details">
+          <div class="total-items">
+            Total tasks: <span id="total" class="stat"> </span>
+          </div>
+
+          <div class="done-items">
+            Completed: <span id="complete" class="stat"> </span>
+          </div>
+
+          <div class="undone-items">
+            Incompleted: <span id="incomplete" class="stat"> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
